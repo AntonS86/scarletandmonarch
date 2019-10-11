@@ -1,0 +1,140 @@
+@import "./partials/index";
+
+.slider-presentation {
+  margin-top: get-spacer(4);
+  position: relative;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    height: 548px;
+    @include media-breakpoint-down('md') {
+      height: 570px;
+    }
+    @include media-breakpoint-down('sm') {
+      height: 239px;
+    }
+  }
+
+  &__wrapper {
+    @include make-col(5);
+    background: linear-gradient(203.32deg, rgba(40, 38, 150, 0.98) 24.1%, #09ABE4 123.85%), url(/images/lgr.png) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down('lg') {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-down('md') {
+      @include make-col(7);
+    }
+    @include media-breakpoint-down('sm') {
+      @include make-col(12);
+    }
+  }
+
+  &__description {
+    width: 60%;
+    margin: auto;
+    //padding: 0 144px 0 90px;
+    color: $white;
+    @include media-breakpoint-down('sm') {
+      min-width: 230px;
+      width: 80%;
+    }
+  }
+
+  &__image {
+    @include make-col(7);
+    background: no-repeat center;
+    background-size: cover;
+    @include media-breakpoint-down('lg') {
+      @include make-col(6);
+    }
+
+    @include media-breakpoint-down('md') {
+      @include make-col(5);
+    }
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: $font-weight-semibold;
+    @include font-size($h1-font-size);
+    margin-bottom: get-spacer(4);
+    line-height: $line-height-sm;
+    @include media-breakpoint-down('sm') {
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: get-spacer(2);
+    }
+  }
+
+  &__sub-title {
+    font-weight: $font-weight-light;
+    margin-bottom: get-spacer(4);
+    @include font-size($font-size-base);
+    @include media-breakpoint-down('sm') {
+      @include font-size($font-size-sm);
+      margin-bottom: get-spacer(3);
+    }
+  }
+
+  &__button {
+    width: 230px;
+    @include media-breakpoint-down('sm') {
+      width: 100%;
+    }
+  }
+  
+  &__control {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+
+    &--next {
+      top: 48%;
+      right: 2%;
+    }
+
+    &--prev {
+      top: 48%;
+      left: 2%;
+    }
+  }
+  &__pagination {
+    position: absolute;
+    width: 60%;
+    margin-left: 8.4%;
+    margin-bottom: 4%;
+    z-index: 10;
+    bottom: 1%;
+    @include media-breakpoint-down('lg') {
+      margin-left: 10%;
+    }
+
+    @include media-breakpoint-down('md') {
+      margin-left: 11.6%;
+    }
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+
+    & > .swiper-pagination-bullet {
+      margin-right: get-spacer(2);
+      display: inline-block;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      border: 1px solid $white;
+      cursor: pointer;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $white;
+      }
+    }
+  }
+}

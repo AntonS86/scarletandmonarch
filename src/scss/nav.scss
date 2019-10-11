@@ -17,6 +17,7 @@
     padding: get-spacer(3) 0;
     text-transform: uppercase;
     text-align: center;
+    margin-right: get-spacer(3);
 
     &:hover .nav__sub-list {
       display: block;

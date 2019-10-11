@@ -1,5 +1,12 @@
 @import "~bootstrap/scss/variables";
 
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1410px
+);
+
 //color
 $black: #333333;
 $body-bg: $white;
@@ -14,13 +21,18 @@ $blue-light-hover: #0096CB;
 
 $primary: $blue;
 $info: $blue-light;
+$light: $white;
+
+$theme-colors: (
+        "white": $white,
+);
 
 
 //font
-$font-weight-light:           300;
-$font-weight-normal:         400;
-$font-weight-semibold:        600;
-$font-weight-bold:            700;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
 $font-weight-map: ('light': $font-weight-light, 'regular': $font-weight-normal, 'semibold': $font-weight-semibold, 'bold': $font-weight-bold);
 
@@ -29,14 +41,30 @@ $headings-font-family: $font-family-base;
 $input-btn-font-family: $font-family-base;
 
 
+$line-height-lg: 1.8;
+$line-height-sm: 1.2;
+
+
 // Links
 //
 // Style anchor elements.
 $link-hover-decoration: none;
 
 // Components
+$enable-shadows: true;
 
 $border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+$btn-border-radius: 0;
+$btn-border-radius-lg: 0;
+$btn-border-radius-sm: 0;
+
+$btn-padding-y: 1rem;
+$btn-padding-x: .75rem;
+
+$btn-focus-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
 //transition
 

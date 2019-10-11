@@ -25,6 +25,7 @@ html, body {
   font-family: 'Lato';
   font-weight: $font-weight-base;
   font-size: $font-size-base;
+  line-height: $line-height-base;
   color: $body-color;
 }
 
@@ -43,7 +44,7 @@ body {
 
 header, main, footer {
   @include make-container();
-  @include make-container-max-widths();
+  //@include make-container-max-widths();
 }
 
 header, footer {
