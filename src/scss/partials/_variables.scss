@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/variables";
+
+//color
+$black: #333333;
+$body-bg: $white;
+$body-color: $black;
+$gray-500: #BDBDBD;
+$gray-600: #828282;
+
+$blue: #282696;
+$blue-light: #09ABE4;
+
+$blue-light-hover: #0096CB;
+
+$primary: $blue;
+$info: $blue-light;
+
+
+//font
+$font-family-base: Lato;
+$headings-font-family: $font-family-base;
+$input-btn-font-family: $font-family-base;
+
+
+// Links
+//
+// Style anchor elements.
+$link-hover-decoration: none;
+
+// Components
+
+$border-radius: 0;

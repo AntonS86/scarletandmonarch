@@ -1,0 +1,44 @@
+@import './partials/index';
+
+.header-top {
+  @include media-breakpoint-down('sm') {
+    display: none;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+
+  &__block {
+    display: flex;
+    margin: get-spacer(3) 0;
+
+  }
+
+  &__content {
+    padding: 0 2rem;
+    @include font-size($font-size-sm);
+    color: $gray-600;
+
+    @include media-breakpoint-down('md') {
+      padding: 0 get-spacer(3);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__content--border-right {
+    border-right: 1px solid $gray-600;
+  }
+
+  &__icon svg {
+    margin-right: get-spacer(2);
+  }
+
+}

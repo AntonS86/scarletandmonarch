@@ -1,0 +1,6 @@
+@import 'variables';
+
+@function get-spacer($name, $spacers: $spacers) {
+  $value: map_get($spacers, $name);
+  @return if($value, $value, null);
+}
