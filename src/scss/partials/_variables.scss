@@ -17,7 +17,14 @@ $info: $blue-light;
 
 
 //font
-$font-family-base: Lato;
+$font-weight-light:           300;
+$font-weight-normal:         400;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+
+$font-weight-map: ('light': $font-weight-light, 'regular': $font-weight-normal, 'semibold': $font-weight-semibold, 'bold': $font-weight-bold);
+
+$font-family-base: 'Lato';
 $headings-font-family: $font-family-base;
 $input-btn-font-family: $font-family-base;
 
@@ -30,3 +37,7 @@ $link-hover-decoration: none;
 // Components
 
 $border-radius: 0;
+
+//transition
+
+$sub-nav-transition: color .1s ease-in-out, background-color .1s ease-in-out;

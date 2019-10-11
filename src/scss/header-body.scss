@@ -15,6 +15,17 @@
     @include media-breakpoint-down('sm') {
       display: block;
     }
+
+    svg {
+      fill: $blue-light;
+
+    }
+
+    &:hover {
+      svg {
+        fill: $blue-light-hover;
+      }
+    }
   }
 
   &__logo {
@@ -30,6 +41,7 @@
   &__phone {
     flex: 0 0 auto;
     text-align: center;
+    font-weight: $font-weight-semibold;
     @include font-size($h4-font-size);
     @include media-breakpoint-down('sm') {
       display: none;
@@ -62,6 +74,7 @@
     }
     @include media-breakpoint-down('sm') {
       flex-direction: row;
+      padding-left: get-spacer(3);
     }
   }
 

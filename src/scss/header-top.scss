@@ -21,7 +21,7 @@
     color: $gray-600;
 
     @include media-breakpoint-down('md') {
-      padding: 0 get-spacer(3);
+      padding: 0 get-spacer(2);
     }
 
     &:first-child {

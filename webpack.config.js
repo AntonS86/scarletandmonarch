@@ -26,10 +26,10 @@ module.exports = {
             //chunkFilename: '[id].css',
         }),
         new CopyWebpackPlugin([
-            /*{
-                from: './favicon',
-                to: './favicon'
-            },*/
+            {
+                from: './fonts',
+                to: './css/fonts'
+            },
             {
                 from: './images',
                 to: './images'
@@ -72,6 +72,15 @@ module.exports = {
                     loader: 'file-loader',
                     options: {
                         name: 'images/[name][hash].[ext]'
+                    }
+                }]
+            },
+            {
+                test: /woff2$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'fonts/[name].[ext]'
                     }
                 }]
             },

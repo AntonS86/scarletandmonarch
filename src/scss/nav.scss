@@ -1,0 +1,56 @@
+@import "./partials/index";
+
+.nav {
+  @include media-breakpoint-down('sm') {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: get-spacer(4) 0 get-spacer(3) 0;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    padding: get-spacer(3) 0;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover .nav__sub-list {
+      display: block;
+    }
+
+    &:first-child {
+      text-align: left;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  &__sub-list {
+    position: absolute;
+    display: block;
+    top: get-spacer(5);
+    left: get-spacer(2);
+    box-shadow:  0 4px 8px rgba(0,0,0,.15);
+    text-transform: capitalize;
+    display: none;
+    z-index: 10;
+    background: $white;
+  }
+
+  &__sub-item {
+    padding: get-spacer(4) get-spacer(5);
+    cursor: pointer;
+    transition: $sub-nav-transition;
+    text-align: left;
+    &:hover {
+      color: $white;
+      background-color: $blue-light;
+    }
+  }
+}
