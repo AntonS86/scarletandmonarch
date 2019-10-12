@@ -88,14 +88,13 @@
     position: absolute;
     z-index: 10;
     cursor: pointer;
+    top: 48%;
 
     &--next {
-      top: 48%;
       right: 2%;
     }
 
     &--prev {
-      top: 48%;
       left: 2%;
     }
   }

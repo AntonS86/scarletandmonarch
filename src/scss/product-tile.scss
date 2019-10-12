@@ -1,0 +1,154 @@
+@import "./partials/index";
+
+.product-tile {
+  padding: get-spacer(3);
+  display: flex;
+  flex-direction: column;
+  transition: $tile-product-transition;
+  height: 490px;
+  @include media-breakpoint-down('sm') {
+    padding: 0;
+    height: 420px;
+  }
+
+  @include hover() {
+    box-shadow: $shadow-tile-product;
+  }
+
+  &__image-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 330px;
+    background-color: $bg-product-tile;
+    @include media-breakpoint-down('sm') {
+      padding: 0;
+      height: 300px;
+    }
+  }
+
+  &__new-product {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    @include font-size(10px);
+    text-transform: uppercase;
+    background: $blue-light;
+    color: $white;
+    padding: get-spacer(2) get-spacer(4);
+  }
+
+  &__product-image {
+    width: 70%;
+    height: 60%;
+    background: no-repeat center;
+    background-size: cover;
+
+    @include media-breakpoint-up('sm') {
+      width: 50%;
+      height: 40%;
+    }
+
+    @include media-breakpoint-up('md') {
+      width: 70%;
+      height: 60%;
+    }
+  }
+
+  &__product-info {
+    padding: get-spacer(2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__product-title {
+    @include font-size($font-size-base);
+    flex: 1 0 auto;
+    width: 100%;
+  }
+
+  &__active-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__product-price {
+    flex: 1 0 auto;
+  }
+
+  &__current-price {
+    color: $blue-light;
+    font-weight: $font-weight-bold;
+  }
+
+  &__old-price {
+    color: $gray-600;
+    @include font-size($font-size-sm);
+    text-decoration-line: line-through;
+  }
+
+  &__product-statistic {
+    margin-right: 7px;
+    cursor: pointer;
+    color: $blue-light;
+    border: 1px solid $blue-light;
+    padding: 10px 10px;
+
+    & svg {
+      fill: $blue-light;
+    }
+
+    @include hover() {
+      background-color: $blue-light;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+      & svg {
+        fill: $white;
+      }
+    }
+
+  }
+
+  &__product-card-button {
+    cursor: pointer;
+    color: $blue-light;
+    border: 1px solid $blue-light;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    white-space: nowrap;
+
+    @include hover() {
+      color: $white;
+      background-color: $blue-light;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__control {
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    top: 33%;
+
+    &--next {
+      right: 0%;
+      @include media-breakpoint-down('sm') {
+        right: 2%;
+      }
+    }
+
+    &--prev {
+      left: 0%;
+      @include media-breakpoint-down('sm') {
+        left: 2%;
+      }
+    }
+  }
+}

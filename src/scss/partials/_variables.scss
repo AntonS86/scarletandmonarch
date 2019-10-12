@@ -29,7 +29,7 @@ $theme-colors: (
 
 //bg-content
 $bg-content: linear-gradient(203.32deg, rgba(40, 38, 150, 0.98) 24.1%, #09ABE4 123.85%), url(/images/lgr.png) no-repeat center;
-
+$bg-product-tile: #F2F2F2;
 
 
 //font
@@ -71,5 +71,9 @@ $btn-padding-x: .75rem;
 $btn-focus-box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 
 //transition
-
 $sub-nav-transition: color .1s ease-in-out, background-color .1s ease-in-out;
+$tile-product-transition: box-shadow .15s ease-in-out;
+
+//shadow
+
+$shadow-tile-product: 0px 4px 7px rgba(0, 0, 0, 0.15);
