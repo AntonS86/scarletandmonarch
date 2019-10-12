@@ -1,9 +1,11 @@
-@import './main';
+@import 'main';
 @import "btn";
 @import "link";
 @import "form";
-@import './header-top';
-@import './header-body';
-@import './nav';
-@import './slider-presentation';
+@import 'header-top';
+@import 'header-body';
+@import 'nav';
+@import 'main-content';
+@import 'commercial-tile';
+@import 'slider-presentation';
 @import '~swiper/swiper';

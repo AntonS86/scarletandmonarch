@@ -1,0 +1,25 @@
+@import "./partials/index";
+
+.main-content {
+  margin-bottom: 100px;
+
+  @include media-breakpoint-down('lg') {
+    margin-bottom: 70px;
+  }
+
+  @include media-breakpoint-down('md') {
+    margin-bottom: 45px;
+  }
+
+  @include media-breakpoint-down('sm') {
+    margin-bottom: 21px;
+  }
+
+  &__button {
+    width: 230px;
+    @include media-breakpoint-down('sm') {
+      width: 100%;
+    }
+  }
+
+}

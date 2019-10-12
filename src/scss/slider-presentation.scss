@@ -17,7 +17,7 @@
 
   &__wrapper {
     @include make-col(5);
-    background: linear-gradient(203.32deg, rgba(40, 38, 150, 0.98) 24.1%, #09ABE4 123.85%), url(/images/lgr.png) no-repeat center;
+    background: $bg-content;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -83,13 +83,7 @@
     }
   }
 
-  &__button {
-    width: 230px;
-    @include media-breakpoint-down('sm') {
-      width: 100%;
-    }
-  }
-  
+
   &__control {
     position: absolute;
     z-index: 10;
