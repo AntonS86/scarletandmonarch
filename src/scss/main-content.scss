@@ -15,14 +15,35 @@
     margin-bottom: 21px;
   }
 
-  &__title {
-    @include font-size($h2-font-size);
-    font-weight: $font-weight-semibold;
+  &__title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
 
     @include media-breakpoint-down('sm') {
-      @include font-size($font-size-base);
       margin-bottom: 14px;
+    }
+  }
+
+  &__title {
+    @include font-size($h2-font-size);
+    font-weight: $font-weight-semibold;
+
+    @include media-breakpoint-down('sm') {
+      @include font-size($font-size-base);
+    }
+  }
+
+  &__link {
+    color: $blue-light;
+
+    @include media-breakpoint-down('sm') {
+      @include font-size($font-size-xs);
+    }
+
+    @include hover() {
+      color: blue;
     }
   }
 
