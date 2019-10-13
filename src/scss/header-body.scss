@@ -29,7 +29,7 @@
   }
 
   &__logo {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
 
     &-image {
       @include media-breakpoint-down('sm') {
@@ -39,7 +39,7 @@
   }
 
   &__phone {
-    flex: 0 0 auto;
+    flex: 1 0 auto;
     text-align: center;
     font-weight: $font-weight-semibold;
     @include font-size($h4-font-size);
