@@ -1,9 +1,6 @@
 @import "partials/index";
 
 .sales-action {
-  /*display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;*/
   @include make-row();
 
   &__content-block {
@@ -23,6 +20,10 @@
     @include media-breakpoint-up('md') {
       height: 440px;
       flex: 1 0 auto;
+    }
+
+    @include media-breakpoint-up('lg') {
+      flex: 0 0 calc(50% - #{$grid-gutter-width});
     }
 
     &:last-child {
