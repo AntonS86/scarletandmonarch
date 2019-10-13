@@ -1,0 +1,121 @@
+@import "partials/index";
+
+.footer-body {
+  margin-bottom: 33px;
+
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+  }
+
+
+  &__block {
+    @include make-col(3);
+    padding-right: 30px;
+  }
+
+  &__title {
+    color: $blue;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: $line-height-lg;
+    font-weight: $font-weight-normal;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    font-weight: $font-weight-light;
+    line-height: $line-height-sm;
+    margin-bottom: 11px;
+  }
+
+  &__phone {
+    @include font-size($h4-font-size);
+    margin-bottom: 10px;
+  }
+
+  &__mail-link {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    color: $blue-light;
+    border-bottom: 1px solid $blue-light;
+
+    @include hover() {
+      color: $blue;
+      border-bottom: 1px solid $blue;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include media-breakpoint-down('sm') {
+      margin-top: 30px;
+    }
+  }
+
+  &__social-text {
+    @include font-size($font-size-sm);
+    color: $gray-600;
+    margin-right: 18px;
+
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+  }
+
+  &__icon {
+    margin-right: 12px;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 23px 0;
+
+  }
+
+  &__input {
+    background: $bg-footer-input;
+    border: none;
+    @include font-size($font-size-sm);
+    padding: 11px 18px;
+    width: 70%;
+  }
+
+  &__button {
+    border: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 0;
+    color: $white;
+    background: linear-gradient(228.78deg, rgba(40, 38, 150, 0.96) 0%, #09ABE4 100%);
+    @include hover() {
+      background: linear-gradient(228.78deg, rgba(27, 22, 150, 0.96) 0%, #3970e4 100%);
+    }
+  }
+
+  &__doc-link {
+    margin-bottom: 10px;
+  }
+
+  &__sm-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include media-breakpoint-up('md') {
+      display: none;
+    }
+  }
+}

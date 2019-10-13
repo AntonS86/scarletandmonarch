@@ -1,0 +1,63 @@
+@import "partials/index";
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  margin-bottom: 60px;
+
+  @include media-breakpoint-down('sm') {
+    border-top: $footer-border;
+    margin-bottom: 30px;
+  }
+
+  &__users-info {
+    margin-right: 15px;
+  }
+
+  &__info-text {
+    font-weight: $font-weight-light;
+    line-height: $line-height-sm;
+
+    @include media-breakpoint-down('sm') {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: $blue-light;
+
+    @include hover() {
+      color: $blue;
+    }
+  }
+
+
+  &__payment-info {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-down('md') {
+      margin-top: 20px;
+      @include make-col(12);
+    }
+
+    @include media-breakpoint-down('sm') {
+      display: none;
+    }
+  }
+
+  &__payment-text {
+    color: $gray-600;
+    @include font-size($font-size-sm);
+    font-weight: $font-weight-light;
+  }
+
+  &__icon {
+    margin: 0 5px;
+  }
+}

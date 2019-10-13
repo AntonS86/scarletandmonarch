@@ -16,8 +16,9 @@ $gray-600: #828282;
 
 $blue: #282696;
 $blue-light: #09ABE4;
-
 $blue-light-hover: #0096CB;
+
+$footer-border: 1px solid #f2f2f2;
 
 $primary: $blue;
 $info: $blue-light;
@@ -30,6 +31,7 @@ $theme-colors: (
 //bg-content
 $bg-content: linear-gradient(203.32deg, rgba(40, 38, 150, 0.98) 24.1%, #09ABE4 123.85%), url(/images/lgr.png) no-repeat center;
 $bg-product-tile: #F2F2F2;
+$bg-footer-input: #F7F7F7;
 
 
 //font
