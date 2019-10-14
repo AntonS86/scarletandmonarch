@@ -1,13 +1,8 @@
 @import './partials/index';
 
 
-@include font-face('Lato', '../fonts/latolight', 300);
-@include font-face('Lato', '../fonts/latoregular');
-@include font-face('Lato', '../fonts/latosemibold', 600);
-@include font-face('Lato', '../fonts/latobold', 700);
-
 @each $name, $value in $font-weight-map {
-  @include font-face('Lato', '../fonts/lato#{$name}', $value);
+  @include font-face('Lato', '../../fonts/lato#{$name}', $value);
 }
 
 

@@ -3,14 +3,12 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin       = require('html-webpack-plugin');
 const {CleanWebpackPlugin}    = require('clean-webpack-plugin');
 const MiniCssExtractPlugin    = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin            = require('terser-webpack-plugin');
 const autoprefixer            = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context     : path.resolve(__dirname, 'src'),
-    entry       : ['./index.js',],
+    entry       : ['@babel/polyfill', './index.js',],
     output      : {
         path    : path.resolve(__dirname, 'dist'),
         filename: "js/bundle.js",
@@ -19,17 +17,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             title   : "ScarletAndMonarch",
             filename: "index.html",
-            template: "index.html"
+            template: "index.html",
+            minify: {
+                collapseWhitespace: true,
+            }
         }),
         new MiniCssExtractPlugin({
             filename: 'css/style.css',
-            //chunkFilename: '[id].css',
         }),
         new CopyWebpackPlugin([
-            {
-                from: './fonts',
-                to: './css/fonts'
-            },
             {
                 from: './images',
                 to: './images'
@@ -50,12 +46,30 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use : [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader : MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                        },
+                    },
+
                     {
                         loader : 'css-loader',
                         options: {
                             sourceMap: true,
                         },
+                    },
+                    {
+                        loader : 'postcss-loader', // Run postcss actions
+                        options: {
+                            plugins  : [
+                                    autoprefixer,
+                                ],
+                            sourceMap: true
+                        }
+                    },
+                    {
+                        loader: 'resolve-url-loader',
                     },
                     {
                         loader : 'sass-loader',
@@ -71,7 +85,7 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: 'images/[name][hash].[ext]'
+                        name: 'images/[name].[ext]'
                     }
                 }]
             },
@@ -93,7 +107,7 @@ module.exports = {
     },
     devtool: '#eval-source-map'
 };
-
+console.log(process.env.NODE_ENV)
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map';
     module.exports.plugins = (module.exports.plugins || []).concat([
@@ -104,6 +118,6 @@ if (process.env.NODE_ENV === 'production') {
         }),
         new webpack.LoaderOptionsPlugin({
             minimize: true
-        })
+        }),
     ])
 }

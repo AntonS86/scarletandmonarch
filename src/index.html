@@ -126,7 +126,7 @@
                             </linearGradient>
                         </defs>
                     </svg>
-                    <span class="header-body__user-text">Корзина</span>(12)</a>
+                    <span class="header-body__user-text">Корзина</span>(<span id="cartQuantity">0</span>)</a>
             </div>
         </div>
     </div>
@@ -305,7 +305,7 @@
                 </div>
             </div>
             <div class="commercial-tile__image-block">
-                <div class="commercial-tile__image" style="background-image: url('/images/glasses1.png')"></div>
+                <div class="commercial-tile__image" style="background-image: url(./images/glasses1.png)"></div>
             </div>
         </div>
     </section>
@@ -316,7 +316,7 @@
         <div class="swiper-container" id="slider-product">
             <div class="swiper-wrapper main-content--mb3">
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="1">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -329,7 +329,7 @@
                                     <div class="product-tile__current-price">14500 руб.</div>
                                     <div class="product-tile__old-price">17500 руб.</div>
                                 </div>
-                                <button class="product-tile__product-statistic btn">
+                                <button class="product-tile__product-statistic btn" >
                                     <svg width="15" height="17" viewBox="0 0 15 15"
                                          xmlns="http://www.w3.org/2000/svg">
                                         <path d="M15 16.2999V3.70012C15 3.31335 14.8081 3 14.5715 3H12.4285C12.1918 3 12 3.31335 12 3.70012V16.2999C12 16.6868 12.1918 17 12.4285 17H14.5714C14.8081 17 15 16.6868 15 16.2999Z"/>
@@ -338,13 +338,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="2">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -366,13 +366,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="3">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -394,13 +394,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="4">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -422,13 +422,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="5">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -450,13 +450,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="6">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -478,13 +478,13 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="product-tile">
+                    <div class="product-tile" data-product-id="7">
                         <div class="product-tile__image-block">
                             <div class="product-tile__new-product">Новинка</div>
                             <div class="product-tile__product-image"
@@ -506,7 +506,7 @@
                                     </svg>
 
                                 </button>
-                                <a class="btn product-tile__product-card-button">в корзину</a>
+                                <button class="btn product-tile__product-cart-button">в корзину</button>
                             </div>
                         </div>
                     </div>
