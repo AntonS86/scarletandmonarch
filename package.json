@@ -40,6 +40,6 @@
   ],
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
-    "swiper": "^5.0.4"
+    "swiper": "^6.5.1"
   }
 }
